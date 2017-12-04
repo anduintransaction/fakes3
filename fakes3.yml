@@ -1,0 +1,8 @@
+s3ApiServer:
+  http:
+    addr: ":8000"
+  advertisedAddr: ""
+  dataFolder: "/data/fakes3"
+logging:
+  output: "stdout"
+  level: "DEBUG"
