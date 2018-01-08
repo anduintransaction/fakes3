@@ -60,3 +60,8 @@ func (s *Server) deleteObjectRoute(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusNoContent)
 	writeEmptySuccessResponse(w)
 }
+
+func (s *Server) optionObjectRoute(w http.ResponseWriter, r *http.Request) {
+	addCORSHeaders(w)
+	writeEmptySuccessResponse(w)
+}

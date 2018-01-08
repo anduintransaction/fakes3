@@ -34,5 +34,6 @@ func (s *Server) newMux() http.Handler {
 	mux.HandleFunc(pat.Post("/:bucket/*"), s.postObjectRoute)
 	mux.HandleFunc(pat.Put("/:bucket/*"), s.putObjectRoute)
 	mux.HandleFunc(pat.Delete("/:bucket/*"), s.deleteObjectRoute)
+	mux.HandleFunc(pat.Options("/:bucket/*"), s.optionObjectRoute)
 	return mux
 }
